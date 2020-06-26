@@ -4,6 +4,12 @@ $primary-color: #8ed0f9;
 $secondary-color: #293d49;
 $tertiary-color: #fffa6b;
 
+@mixin flexCtr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +28,7 @@ a {
   text-decoration: none;
   color: #fff;
   border-bottom: solid transparent 2px;
+  transition: all 0.3s ease-in;
 
   &:hover,
   &:active {
@@ -76,6 +83,7 @@ img {
     letter-spacing: 0.17em;
     padding: 0.2em 0.3em;
     font-style: italic;
+    box-shadow: 1px 3px 5px rgba($color: #000000, $alpha: 0.3);
 
     &__and {
       font-size: 0.4em;
@@ -91,9 +99,8 @@ img {
 .hero {
   color: $primary-color;
   min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  @include flexCtr;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('img/shoes.jpg');
   background-size: cover;
@@ -139,7 +146,7 @@ img {
 }
 
 .section-b {
-  padding: 5rem 3rem 5rem 3rem;
+  padding: 5rem 3rem;
   color: $secondary-color;
   background-color: #e0fffb;
 
@@ -190,7 +197,7 @@ img {
 }
 
 @media (max-width: 700px) {
-  .nav-main__item:not(:last-of-type):not(:last-of-type) {
+  .nav-main__item:not(:last-of-type) {
     margin-right: 1.2rem;
   }
   .section-a {

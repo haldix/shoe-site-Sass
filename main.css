@@ -18,6 +18,8 @@ a {
   text-decoration: none;
   color: #fff;
   border-bottom: solid transparent 2px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 a:hover, a:active {
@@ -83,6 +85,8 @@ img {
   letter-spacing: 0.17em;
   padding: 0.2em 0.3em;
   font-style: italic;
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .nav-main .logo__and {
@@ -100,12 +104,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("img/shoes.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/shoes.jpg");
   background-size: cover;
@@ -159,7 +163,7 @@ img {
 }
 
 .section-b {
-  padding: 5rem 3rem 5rem 3rem;
+  padding: 5rem 3rem;
   color: #293d49;
   background-color: #e0fffb;
 }
@@ -223,7 +227,7 @@ img {
 }
 
 @media (max-width: 700px) {
-  .nav-main__item:not(:last-of-type):not(:last-of-type) {
+  .nav-main__item:not(:last-of-type) {
     margin-right: 1.2rem;
   }
   .section-a {
